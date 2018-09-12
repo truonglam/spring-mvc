@@ -15,7 +15,12 @@
         <div class="page-content">
             <div class="row" >
                 <div class="col-xs-12">
-
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Chọn file upload:</label>
+                        <div class="col-sm-9">
+                            <input type="file" name="file" id="uploadImage"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

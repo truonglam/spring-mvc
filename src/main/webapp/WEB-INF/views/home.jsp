@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp" %>
-
+<c:url var="uploadURL" value="/api/home"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -48,6 +48,38 @@
 	</a>
 
 </div>
+<script>
+	$(document).ready(function () {
+
+    })
+	$('#uploadImage').change(function () {
+	    var dataArray = {};
+	    var files = $(this)[0].files[0];
+	    if (files != undefined) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                dataArray["base64"] = e.target.result;
+                dataArray["name"] = files.name;
+                uploadFile(dataArray);
+            };
+            reader.readAsDataURL(files);
+		}
+    });
+	function uploadFile(data) {
+	    $.ajax({
+	        url: '${uploadURL}',
+			type: 'POST',
+			data: JSON.stringify(data),
+			contentType: 'application/json',
+			success: function (res) {
+                console.log(res);
+            },
+			error: function (res) {
+	            console.log(res);
+            }
+		});
+    }
+</script>
 
 <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
 <script src="<c:url value='/template/admin/assets/js/jquery-ui.custom.min.js' />"></script>
