@@ -1,6 +1,3 @@
---psql -U postgres:	access root account postgres
-CREATE USER springexample WITH PASSWORD '123456';
-CREATE DATABASE springexample OWNER springexample ENCODING = 'UTF8';
---\q
---psql -U springexample -d springexample (pass: 123456)
-CREATE SCHEMA springexample;
+CREATE USER springmvc WITH PASSWORD '123456';
+CREATE DATABASE springmvc OWNER springmvc ENCODING = 'UTF8';
+CREATE SCHEMA springmvc;

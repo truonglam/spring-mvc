@@ -1,4 +1,4 @@
-set search_path to springexample;
+set search_path to springmvc;
 
 insert into role(code,name) values('ADMIN','Quản trị hệ thống');
 insert into role(code,name) values('USER','Nhân viên');
