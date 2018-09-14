@@ -35,25 +35,6 @@
                 <span class="btn btn-danger"></span>
             </div>
         </div>
-        <ul class="nav nav-list">
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-list"></i>
-                    <span class="menu-text">Quản lý bài đăng</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-                    <li class="">                       
-                        <a href='<c:url value="/admin/new/list"/>'>
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Danh sách bài đăng
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-        </ul>       
         <div class="sidebar-toggle sidebar-collapse">
             <i class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
         </div>
